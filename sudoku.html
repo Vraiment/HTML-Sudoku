@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Sudoku</title>
+		<!-- Requirements -->
+		<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+		<script src="jquery.numeric.js"></script>
+		
+		<!-- Code -->
+		<script src="sudoku.js"></script>
+		
+		<!-- SWAG -->
+		<link rel="stylesheet" href="sudoku.css" />
+	</head>
+	<body>
+		<div id="sudoku">
+			<table id="blck00" class="blck" style="float: left; margin-right: 10px; margin-bottom: 10px;">
+				<tr>
+					<td>
+						<input id="sqr00" class="sqr" type="text" maxlength="1" />
+					</td>
+					<td>
+						<input id="sqr10" class="sqr" type="text" maxlength="1" />
+					</td>
+					<td>
+						<input id="sqr20" class="sqr" type="text" maxlength="1" />
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input id="sqr01" class="sqr" type="text" maxlength="1" />
+					</td>
+					<td>
+						<input id="sqr11" class="sqr" type="text" maxlength="1" />
+					</td>
+					<td>
+						<input id="sqr21" class="sqr" type="text" maxlength="1" />
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input id="sqr02" class="sqr" type="text" maxlength="1" />
+					</td>
+					<td>
+						<input id="sqr12" class="sqr" type="text" maxlength="1" />
+					</td>
+					<td>
+						<input id="sqr22" class="sqr" type="text" maxlength="1" />
+					</td>
+				</tr>
+			</table>
+			
+			<table id="blck10" class="blck" style="float: left; margin-right: 10px; margin-bottom: 10px;">
+				<tr>
+					<td>
+						<input id="sqr30" class="sqr" type="text" maxlength="1" />
+					</td>
+					<td>
+						<input id="sqr40" class="sqr" type="text" maxlength="1" />
+					</td>
+					<td>
+						<input id="sqr50" class="sqr" type="text" maxlength="1" />
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input id="sqr31" class="sqr" type="text" maxlength="1" />
+					</td>
+					<td>
+						<input id="sqr41" class="sqr" type="text" maxlength="1" />
+					</td>
+					<td>
+						<input id="sqr51" class="sqr" type="text" maxlength="1" />
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input id="sqr32" class="sqr" type="text" maxlength="1" />
+					</td>
+					<td>
+						<input id="sqr42" class="sqr" type="text" maxlength="1" />
+					</td>
+					<td>
+						<input id="sqr52" class="sqr" type="text" maxlength="1" />
+					</td>
+				</tr>
+			</table>
+			
+			<table id="blck20" class="blck" style="margin-right: 10px; margin-bottom: 10px;">
+				<tr>
+					<td>
+						<input id="sqr60" class="sqr" type="text" maxlength="1" />
+					</td>
+					<td>
+						<input id="sqr70" class="sqr" type="text" maxlength="1" />
+					</td>
+					<td>
+						<input id="sqr80" class="sqr" type="text" maxlength="1" />
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input id="sqr61" class="sqr" type="text" maxlength="1" />
+					</td>
+					<td>
+						<input id="sqr71" class="sqr" type="text" maxlength="1" />
+					</td>
+					<td>
+						<input id="sqr81" class="sqr" type="text" maxlength="1" />
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input id="sqr62" class="sqr" type="text" maxlength="1" />
+					</td>
+					<td>
+						<input id="sqr72" class="sqr" type="text" maxlength="1" />
+					</td>
+					<td>
+						<input id="sqr82" class="sqr" type="text" maxlength="1" />
+					</td>
+				</tr>
+			</table>
+			
+			<table id="blck01" class="blck" style="float: left; margin-right: 10px; margin-bottom: 10px;">
+				<tr>
+					<td>
+						<input id="sqr03" class="sqr" type="text" maxlength="1" />
+					</td>
+					<td>
+						<input id="sqr13" class="sqr" type="text" maxlength="1" />
+					</td>
+					<td>
+						<input id="sqr23" class="sqr" type="text" maxlength="1" />
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input id="sqr04" class="sqr" type="text" maxlength="1" />
+					</td>
+					<td>
+						<input id="sqr14" class="sqr" type="text" maxlength="1" />
+					</td>
+					<td>
+						<input id="sqr24" class="sqr" type="text" maxlength="1" />
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input id="sqr05" class="sqr" type="text" maxlength="1" />
+					</td>
+					<td>
+						<input id="sqr15" class="sqr" type="text" maxlength="1" />
+					</td>
+					<td>
+						<input id="sqr25" class="sqr" type="text" maxlength="1" />
+					</td>
+				</tr>
+			</table>
+			
+			<table id="blck11" class="blck" style="float: left; margin-right: 10px; margin-bottom: 10px;">
+				<tr>
+					<td>
+						<input id="sqr33" class="sqr" type="text" maxlength="1" />
+					</td>
+					<td>
+						<input id="sqr43" class="sqr" type="text" maxlength="1" />
+					</td>
+					<td>
+						<input id="sqr53" class="sqr" type="text" maxlength="1" />
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input id="sqr34" class="sqr" type="text" maxlength="1" />
+					</td>
+					<td>
+						<input id="sqr44" class="sqr" type="text" maxlength="1" />
+					</td>
+					<td>
+						<input id="sqr54" class="sqr" type="text" maxlength="1" />
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input id="sqr35" class="sqr" type="text" maxlength="1" />
+					</td>
+					<td>
+						<input id="sqr45" class="sqr" type="text" maxlength="1" />
+					</td>
+					<td>
+						<input id="sqr55" class="sqr" type="text" maxlength="1" />
+					</td>
+				</tr>
+			</table>
+			
+			<table id="blck21" class="blck" style="margin-right: 10px; margin-bottom: 10px;">
+				<tr>
+					<td>
+						<input id="sqr63" class="sqr" type="text" maxlength="1" />
+					</td>
+					<td>
+						<input id="sqr73" class="sqr" type="text" maxlength="1" />
+					</td>
+					<td>
+						<input id="sqr83" class="sqr" type="text" maxlength="1" />
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input id="sqr64" class="sqr" type="text" maxlength="1" />
+					</td>
+					<td>
+						<input id="sqr74" class="sqr" type="text" maxlength="1" />
+					</td>
+					<td>
+						<input id="sqr84" class="sqr" type="text" maxlength="1" />
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input id="sqr65" class="sqr" type="text" maxlength="1" />
+					</td>
+					<td>
+						<input id="sqr75" class="sqr" type="text" maxlength="1" />
+					</td>
+					<td>
+						<input id="sqr85" class="sqr" type="text" maxlength="1" />
+					</td>
+				</tr>
+			</table>
+			
+			<table id="blck02" class="blck" style="float: left; margin-right: 10px; margin-bottom: 10px;">
+				<tr>
+					<td>
+						<input id="sqr06" class="sqr" type="text" maxlength="1" />
+					</td>
+					<td>
+						<input id="sqr16" class="sqr" type="text" maxlength="1" />
+					</td>
+					<td>
+						<input id="sqr26" class="sqr" type="text" maxlength="1" />
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input id="sqr07" class="sqr" type="text" maxlength="1" />
+					</td>
+					<td>
+						<input id="sqr17" class="sqr" type="text" maxlength="1" />
+					</td>
+					<td>
+						<input id="sqr27" class="sqr" type="text" maxlength="1" />
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input id="sqr08" class="sqr" type="text" maxlength="1" />
+					</td>
+					<td>
+						<input id="sqr18" class="sqr" type="text" maxlength="1" />
+					</td>
+					<td>
+						<input id="sqr28" class="sqr" type="text" maxlength="1" />
+					</td>
+				</tr>
+			</table>
+			
+			<table id="blck12" class="blck" style="float: left; margin-right: 10px; margin-bottom: 10px;">
+				<tr>
+					<td>
+						<input id="sqr36" class="sqr" type="text" maxlength="1" />
+					</td>
+					<td>
+						<input id="sqr46" class="sqr" type="text" maxlength="1" />
+					</td>
+					<td>
+						<input id="sqr56" class="sqr" type="text" maxlength="1" />
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input id="sqr37" class="sqr" type="text" maxlength="1" />
+					</td>
+					<td>
+						<input id="sqr47" class="sqr" type="text" maxlength="1" />
+					</td>
+					<td>
+						<input id="sqr57" class="sqr" type="text" maxlength="1" />
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input id="sqr38" class="sqr" type="text" maxlength="1" />
+					</td>
+					<td>
+						<input id="sqr48" class="sqr" type="text" maxlength="1" />
+					</td>
+					<td>
+						<input id="sqr58" class="sqr" type="text" maxlength="1" />
+					</td>
+				</tr>
+			</table>
+			
+			<table id="blck22" class="blck" style="margin-right: 10px; margin-bottom: 10px;">
+				<tr>
+					<td>
+						<input id="sqr66" class="sqr" type="text" maxlength="1" />
+					</td>
+					<td>
+						<input id="sqr76" class="sqr" type="text" maxlength="1" />
+					</td>
+					<td>
+						<input id="sqr86" class="sqr" type="text" maxlength="1" />
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input id="sqr67" class="sqr" type="text" maxlength="1" />
+					</td>
+					<td>
+						<input id="sqr77" class="sqr" type="text" maxlength="1" />
+					</td>
+					<td>
+						<input id="sqr87" class="sqr" type="text" maxlength="1" />
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input id="sqr68" class="sqr" type="text" maxlength="1" />
+					</td>
+					<td>
+						<input id="sqr78" class="sqr" type="text" maxlength="1" />
+					</td>
+					<td>
+						<input id="sqr88" class="sqr" type="text" maxlength="1" />
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div>
+			<label>Edit mode</label>
+			<input id="enableEdit" type="checkbox" />
+        </div>
+	</body>
+</html>

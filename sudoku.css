@@ -1,0 +1,27 @@
+#sudoku .blck
+{
+	border-width: 2px;
+	border-spacing: 0px;
+	border-style: solid;
+	border-color: gray;
+	border-collapse: collapse;
+}
+
+#sudoku .blck td
+{
+	border-width: 1px;
+	padding: 1px;
+	border-style: solid;
+	border-color: gray;
+}
+
+#sudoku .blck .sqr
+{
+	width: 10px;
+}
+
+#sudoku .blck .value
+{
+	font-weight: bold;
+	background-color: lightgray;
+}
