@@ -338,9 +338,18 @@
 				</tr>
 			</table>
 		</div>
-		<div>
-			<label>Edit mode</label>
-			<input id="enableEdit" type="checkbox" />
+		<div style="overflow: auto; width: 300px;">
+			<div style="float: left;">
+				<label>Edit mode</label>
+				<br />
+				<input id="enableEdit" type="checkbox" />
+			</div>
+			<div style="float: right;">
+				<textarea id="sudokuData" rows="4" cols="25"></textarea>
+				<br />
+				<button id="loadData">Load</button>
+				<button id="saveData">Save</button>
+			</div>
         </div>
 	</body>
 </html>
